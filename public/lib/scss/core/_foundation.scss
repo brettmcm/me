@@ -1,0 +1,45 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: usual, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size:calc(1em + 0.35vw);
+
+    background: $background;
+    color: $foreground;
+
+    margin: 0;
+}
+
+.rlb {
+    display: block;
+}
+
+.hero {
+    padding: 0 5vw;
+    height: calc(100vh - 2em - 15vw);
+    margin-bottom: 5vw;
+}
+
+section {
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+@media only screen and (min-width: 1000px) {
+    body {
+        flex-direction: row-reverse;
+    }
+    .rlb {
+        display: none;
+    }
+}

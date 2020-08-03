@@ -1,0 +1,274 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+    opacity: 0.5; }
+
+  100% {
+    transform: translateY(0.25em);
+    opacity: 1; } }
+
+@keyframes cycle1 {
+  /* When you start the slide, the first image is already visible */
+  /* Original Position */
+  16% {
+    opacity: 1; }
+
+  /* From 4% to 16 % = for 3 seconds the image is visible */
+  20% {
+    opacity: 0.1; }
+
+  /* From 16% to 20% = for 1 second exit image */
+  21% {
+    opacity: 0.1; }
+
+  /* Return to Original Position */
+  92% {
+    opacity: 0.1; }
+
+  96% {
+    opacity: 0.1; }
+
+  /* From 96% to 100% = for 1 second enter image*/
+  100% {
+    top: 0px;
+    opacity: 1; } }
+
+@keyframes cycle2 {
+  0% {
+    opacity: 0.1; }
+
+  /* Original Position */
+  16% {
+    opacity: 0.1; }
+
+  /* Starts moving after 16% to this position */
+  20% {
+    opacity: 1; }
+
+  24% {
+    opacity: 1; }
+
+  /* From 20% to 24% = for 1 second enter image*/
+  36% {
+    opacity: 1; }
+
+  /* From 24% to 36 % = for 3 seconds the image is visible */
+  40% {
+    opacity: 0.1; }
+
+  /* From 36% to 40% = for 1 second exit image */
+  41% {
+    opacity: 0.1; }
+
+  /* Return to Original Position */
+  100% {
+    opacity: 0.1; } }
+
+@keyframes cycle3 {
+  0% {
+    opacity: 0.1; }
+
+  36% {
+    opacity: 0.1; }
+
+  40% {
+    opacity: 1; }
+
+  44% {
+    opacity: 1; }
+
+  56% {
+    opacity: 1; }
+
+  60% {
+    opacity: 0.1; }
+
+  61% {
+    opacity: 0.1; }
+
+  100% {
+    opacity: 0.1; } }
+
+@keyframes cycle4 {
+  0% {
+    opacity: 0.1; }
+
+  56% {
+    opacity: 0.1; }
+
+  60% {
+    opacity: 1; }
+
+  64% {
+    opacity: 1; }
+
+  76% {
+    opacity: 1; }
+
+  80% {
+    opacity: 0.1; }
+
+  81% {
+    opacity: 0.1; }
+
+  100% {
+    opacity: 0.1; } }
+
+@keyframes cycle5 {
+  0% {
+    opacity: 0.1; }
+
+  76% {
+    opacity: 0.1; }
+
+  80% {
+    opacity: 1; }
+
+  84% {
+    opacity: 1; }
+
+  96% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0.1; } }
+
+h1, h3 {
+  font-family: maple-web, usual,sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  text-transform: uppercase; }
+
+h1 {
+  font-size: 3em;
+  line-height: 0.7em; }
+
+h2 {
+  font-size: 2em;
+  line-height: 1.4em; }
+
+h3 {
+  margin-top: 2em; }
+
+p {
+  line-height: 1.5em; }
+  p.experience {
+    column-count: 2; }
+
+a {
+  text-decoration: none;
+  color: #00aeff;
+  transition: color 0.08s;
+  white-space: nowrap; }
+  a:hover {
+    color: #1ab6ff; }
+  a.invert {
+    color: white; }
+    a.invert:hover {
+      color: #1ab6ff; }
+  a.inline {
+    color: inherit;
+    text-decoration: underline; }
+
+html {
+  margin: 0;
+  padding: 0; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: usual, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: calc(1em + 0.35vw);
+  background: #262626;
+  color: white;
+  margin: 0; }
+
+.rlb {
+  display: block; }
+
+.hero {
+  padding: 0 5vw;
+  height: calc(100vh - 2em - 15vw);
+  margin-bottom: 5vw; }
+
+section {
+  box-sizing: border-box;
+  min-height: 100vh; }
+
+@media only screen and (min-width: 1000px) {
+  body {
+    flex-direction: row-reverse; }
+
+  .rlb {
+    display: none; } }
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5vw;
+  height: 2em; }
+  header .logo {
+    font-family: maple-web, usual,sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 2em; }
+    header .logo.invert {
+      color: #262626; }
+  header nav {
+    display: flex;
+    flex-direction: row;
+    font-weight: 800; }
+    header nav a {
+      margin-left: 1.5vw; }
+
+img.portrait {
+  width: 100%;
+  height: 100vw;
+  max-height: 45vh;
+  border-radius: 2px;
+  object-fit: cover;
+  object-position: 50% 60%;
+  opacity: 0;
+  animation: fadeIn ease 0.7s;
+  -webkit-animation: fadeIn ease 0.7s;
+  -moz-animation: fadeIn ease 0.7s;
+  -o-animation: fadeIn ease 0.7s;
+  -ms-animation: fadeIn ease 0.7s;
+  animation-fill-mode: forwards; }
+
+main {
+  box-sizing: border-box;
+  padding: 5vw;
+  width: 100%;
+  opacity: 0;
+  animation: fadeIn ease 1.7s;
+  -webkit-animation: fadeIn ease 1.7s;
+  -moz-animation: fadeIn ease 1.7s;
+  -o-animation: fadeIn ease 1.7s;
+  -ms-animation: fadeIn ease 1.7s;
+  animation-fill-mode: forwards; }
+
+@media only screen and (min-width: 1000px) {
+  main {
+    padding: 3vw 8vw;
+    max-height: 100vh;
+    overflow-y: scroll; }
+
+  img.portrait {
+    margin: 0;
+    height: 100%;
+    width: 48vw;
+    max-height: none;
+    /* max-width: 900px; */ } }

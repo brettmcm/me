@@ -1,0 +1,29 @@
+header {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vw;
+    height: 2em;
+
+    .logo {
+        font-family: maple-web, usual,sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        text-transform: uppercase;
+        font-size:2em;
+        &.invert {
+            color: $background;
+        }
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        font-weight: 800;
+        a {
+            margin-left: 1.5vw;
+        }
+    }
+}
