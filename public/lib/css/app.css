@@ -170,7 +170,7 @@ a {
   a:hover {
     color: #1ab6ff; }
   a.invert {
-    color: white; }
+    color: #262626; }
     a.invert:hover {
       color: #1ab6ff; }
   a.inline {
@@ -189,9 +189,13 @@ body {
   font-weight: 300;
   font-style: normal;
   font-size: calc(1em + 0.35vw);
-  background: #262626;
-  color: white;
+  background: white;
+  color: #262626;
   margin: 0; }
+  @media screen and (prefers-color-scheme: dark) {
+    body {
+      background: #262626;
+      color: white; } }
 
 .rlb {
   display: block; }
@@ -225,7 +229,7 @@ header {
     text-transform: uppercase;
     font-size: 2em; }
     header .logo.invert {
-      color: #262626; }
+      color: white; }
   header nav {
     display: flex;
     flex-direction: row;

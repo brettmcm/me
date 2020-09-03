@@ -17,6 +17,11 @@ body {
     background: $background;
     color: $foreground;
 
+    @media screen and (prefers-color-scheme: dark) {
+        background: $foreground;
+        color: $background;
+    }
+
     margin: 0;
 }
 
